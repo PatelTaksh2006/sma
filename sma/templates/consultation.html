@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Investment Consultation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .container {
+            width: 40%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Personalized Investment Consultation</div>
+    <div class="container">
+        <h2>Schedule Your Consultation</h2>
+        <p>Get one-on-one advice tailored to your financial goals and investment needs. Fill out the form below to schedule your consultation.</p>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        
+        <label for="goal">What is your primary investment goal?</label>
+        <select id="goal" required>
+            <option value="">Select your goal</option>
+            <option value="Retirement Planning">Retirement Planning</option>
+            <option value="Wealth Building">Wealth Building</option>
+            <option value="Tax Saving">Tax Saving</option>
+            <option value="Education Fund">Education Fund</option>
+        </select>
+        
+        <label for="date">Preferred Date for Consultation:</label>
+        <input type="date" id="date" required>
+        
+        <label for="details">Additional Information:</label>
+        <textarea id="details" placeholder="Provide any specific details or questions for the consultation" rows="4"></textarea>
+        
+        <button onclick="bookConsultation()">Book Consultation</button>
+    </div>
+    <div class="footer">&copy; 2025 Personalized Investment Consultation. All rights reserved.</div>
+
+    <script>
+        function bookConsultation() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let goal = document.getElementById("goal").value;
+            let date = document.getElementById("date").value;
+            let details = document.getElementById("details").value;
+            
+            if (!name || !email || !phone || !goal || !date) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+            
+            alert("Your consultation has been booked successfully!\n\nName: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nGoal: " + goal + "\nDate: " + date + "\nDetails: " + details);
+        }
+    </script>
+</body>
+</html>
+
+
